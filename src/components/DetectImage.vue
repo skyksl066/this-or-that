@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-        image: 0,
+        image: 1,
         numImages: 16,
         imageURL: null,
         imageLoaded: false,
@@ -47,7 +47,6 @@ export default {
     },
   },
   async mounted() {
-    this.image++;
     //load up a new model
     this.model = await tf.loadLayersModel('models/model.json');
     
